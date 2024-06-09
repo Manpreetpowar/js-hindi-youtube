@@ -3,7 +3,7 @@
 // 7 types : String, Number, Boolean, null, undefined, Symbol, BigInt,
 const id = Symbol("123");
 const anotherId = Symbol("123");
-console.log(anotherId);
+// console.log(anotherId);
 
 // Reference Type (Non primitive)
 
@@ -35,3 +35,29 @@ const myFunction = function(){
 //        Arrays  =>  object
 //        Function  =>  function
 //        Object  =>  object
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive) is aapko kisi b variables ki copy milti hai, Heap (Non-Primitive) isme original value ka refrence milta hai
+
+let myName = "Manpreet";
+let anotherName = myName;
+anotherName = "Rohit";
+
+// console.log(myName);
+// console.log(anotherName);
+
+let userOne = {
+    email: "user@gmail.com",
+    upi : "user@ybl"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "Manpreet@test.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
